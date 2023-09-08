@@ -70,6 +70,7 @@ header {
     height: 100%;
     cursor: pointer;
     @include center('vertically');
+    justify-content: flex-end;
 
     a {
         text-decoration: none;
