@@ -23,7 +23,7 @@ export default {
     <header>
         <div class="container">
             <div class="logo">
-                <img src="/img/dc-logo.png" alt="">
+                <img src="../assets/img/dc-logo.png" alt="">
             </div>
             <div v-for="link in links" class="link-list">
                 <a href="#">{{ link }}</a>

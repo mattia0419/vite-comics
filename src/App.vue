@@ -1,11 +1,12 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-
+import AppFooterUp from './components/AppFooterUp.vue';
 export default {
   components: {
     AppHeader,
-    AppMain
+    AppMain,
+    AppFooterUp
   }
 }
 </script>
@@ -26,7 +27,12 @@ export default {
     </div>
 
     <AppMain></AppMain>
+
+
   </main>
+  <footer>
+    <AppFooterUp></AppFooterUp>
+  </footer>
 </template>
 
 
@@ -60,5 +66,11 @@ body {
   height: 100%;
   margin: auto;
 
+}
+
+footer {
+  width: 100vw;
+  height: 40vh;
+  background-image: url(./assets/img/footer-bg.jpg);
 }
 </style>
