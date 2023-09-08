@@ -7,3 +7,11 @@
     margin: 0;
     padding: 0;
 }
+
+.container {
+    @include center();
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+
+}

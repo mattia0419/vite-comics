@@ -1,10 +1,11 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-
+import AppMain from './components/AppMain.vue';
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppMain
   }
 }
 </script>
@@ -15,7 +16,17 @@ export default {
 <template>
   <header>
     <AppHeader></AppHeader>
+
   </header>
+  <main>
+    <div class="container">
+      <div class="content">
+        <h2> --- Content goes here --- </h2>
+      </div>
+    </div>
+
+    <AppMain></AppMain>
+  </main>
 </template>
 
 
@@ -23,11 +34,31 @@ export default {
 
 <style lang="scss">
 @use './assets/general.scss';
+@use './assets/partial/_mixins.scss' as *;
+@use './assets/partial/_variables.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 
 body {
   background-color: black;
   font-family: 'Fira Sans', sans-serif;
+}
+
+.content {
+  width: 100%;
+  height: 13vh;
+  @include center('vertically');
+
+  h2 {
+    color: $color_secondary;
+  }
+}
+
+.container {
+  @include center('orizzontaly');
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+
 }
 </style>
