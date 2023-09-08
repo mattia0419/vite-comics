@@ -1,0 +1,9 @@
+@use './partial/_variables.scss' as *;
+
+@use './partial/_mixins.scss' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
