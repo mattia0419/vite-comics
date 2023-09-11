@@ -64,7 +64,7 @@ export default {
 }
 
 .blu-content {
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     background-color: $color_primary;
 }
