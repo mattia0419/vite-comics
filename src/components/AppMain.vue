@@ -81,7 +81,7 @@ export default {
 
     span {
         color: $color_secondary;
-        font-size: 15px;
+        font-size: 13px;
         margin-left: 10px;
     }
 }

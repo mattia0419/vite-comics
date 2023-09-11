@@ -96,7 +96,7 @@ h3 {
         text-decoration: none;
         color: lightgray;
         font-size: 13px;
-        line-height: 25px;
+        line-height: 20px;
     }
 }
 

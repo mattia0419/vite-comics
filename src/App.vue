@@ -2,11 +2,13 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooterUp from './components/AppFooterUp.vue';
+import AppFooterDown from './components/AppFooterDown.vue';
 export default {
   components: {
     AppHeader,
     AppMain,
-    AppFooterUp
+    AppFooterUp,
+    AppFooterDown
   }
 }
 </script>
@@ -32,6 +34,7 @@ export default {
   </main>
   <footer>
     <AppFooterUp></AppFooterUp>
+    <AppFooterDown></AppFooterDown>
   </footer>
 </template>
 
@@ -42,12 +45,11 @@ export default {
 @use './assets/general.scss';
 @use './assets/partial/_mixins.scss' as *;
 @use './assets/partial/_variables.scss' as *;
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Raleway&display=swap');
 
 body {
   background-color: black;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .content {
