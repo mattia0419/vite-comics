@@ -102,6 +102,13 @@ export default {
 
   </header>
   <main>
+    <img class="jumbotron" src="./assets/img/jumbotron.jpg" alt="">
+    <div class="container-label">
+      <div class="label">
+        <h4>CURRENT SERIES</h4>
+      </div>
+    </div>
+
     <div class="container">
       <div class="content">
         <div class="card-container">
@@ -109,7 +116,15 @@ export default {
           <AppThumbsVue v-for="book in books" :img="book.thumb" :text="book.series"></AppThumbsVue>
 
         </div>
+
       </div>
+
+
+    </div>
+    <div class="load-button">
+      <button class="blu-small-button">
+        <h3>LOAD MORE</h3>
+      </button>
     </div>
 
     <AppMain></AppMain>
@@ -136,12 +151,38 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+// JUMBOTRON AND CURRENT SERIES
+.jumbotron {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
+.container-label {
+  @include center('vertically');
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+  margin-top: -20px;
+}
+
+.label {
+  width: 200px;
+  text-align: center;
+  background-color: $color_primary;
+  padding: 15px;
+
+
+  h4 {
+    color: $color_secondary;
+  }
+}
+
+// CARD
 .content {
   width: 100%;
-
   @include center('orizzontally');
-
-
 }
 
 .card-container {
@@ -167,14 +208,31 @@ body {
 
 }
 
+// GENERAL CONTAINER
 .container {
   @include center('orizzontaly');
   width: 1000px;
   height: 100%;
   margin: auto;
-
 }
 
+// LOAD BUTTON
+.load-button {
+  margin-bottom: 20px;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+
+  .blu-small-button {
+    color: $color_secondary;
+    background-color: $color_primary;
+    padding: 10px 40px;
+    border: transparent;
+    cursor: pointer;
+  }
+}
+
+// BACKGROUND FOOTER
 footer {
   width: 100%;
   background-image: url(./assets/img/footer-bg.jpg);

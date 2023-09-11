@@ -54,7 +54,7 @@ export default {
                 <a v-for="shop in shops" href="#">{{ shop }}</a>
             </div>
         </div>
-        <div class="section-2">
+        <div class="section">
             <h3>DC</h3>
             <div class="list">
                 <a v-for="info in informations" href="#">{{ info }}</a>
@@ -75,17 +75,19 @@ export default {
 @use '../assets/partial/_mixins.scss' as *;
 
 .container {
-    @include center('vertically');
+    @include center();
     width: 1000px;
     height: 100%;
     margin: auto;
     justify-content: flex-start;
+    align-items: flex-start;
 
 }
 
 h3 {
     color: $color_secondary;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .list {
@@ -101,22 +103,13 @@ h3 {
 }
 
 .section {
-    height: 100%;
-    margin-top: 15px;
-    justify-content: flex-start;
+
+    margin-top: 25px;
     margin-right: 35px;
+    margin-bottom: 25px;
 }
 
-.section-2 {
-    height: 100%;
-    margin-top: 15px;
-    justify-content: flex-start;
-    margin-right: 35px;
 
-    a {
-        line-height: 20px;
-    }
-}
 
 a:hover {
     color: $color_secondary;
